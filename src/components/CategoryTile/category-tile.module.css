@@ -1,0 +1,57 @@
+.categoryTileContainer {
+    display: grid;
+    height: 640px;
+    gap: 16px;
+    grid-template: 1fr 1fr / 2fr 1fr 1fr ;
+    grid-template-areas: "featured . . "
+                         "featured . .";
+    margin-top: 12px;
+}
+
+.category {
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 24px;
+}
+
+.title {
+
+}
+
+.productInfo {
+
+}
+
+.shopLink {
+
+}
+
+.featured {
+    grid-area: featured;
+}
+
+.featured .title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.women {
+    background-image: url('../../assets/women.jpeg');
+}
+
+.men {
+    background-image: url('../../assets/men.jpeg');
+}
+
+.kid {
+    background-image: url('../../assets/kid.jpeg');
+}
+
+.accessories {
+    background-image: url('../../assets/accessories.jpeg');
+}
+
+.cosmetics {
+    background-image: url('../../assets/cosmetics.jpeg');
+}
