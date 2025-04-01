@@ -1,0 +1,9 @@
+.product {
+    flex: 0 0 calc(25% - 16px);
+    text-align: center;
+}
+
+.productImage {
+    height: auto;
+    width: 100%;
+}

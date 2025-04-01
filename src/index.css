@@ -19,3 +19,17 @@ main {
     text-align: center;
     padding: 20px;
 }
+
+.new-products {
+  display: flex;
+  margin: auto;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1120px;
+  justify-content: space-evenly;
+  width: 75%;
+}
+
+.new-products__title {
+  flex: 0 0 100%;
+}

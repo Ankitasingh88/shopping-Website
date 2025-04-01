@@ -1,4 +1,8 @@
-export const pages = ["Home", "Women's", "men", "Kid's", "Blog", "Contact"]
+export const pages = ["Home", "Women", "men", "Kid", "Blog", "Contact"]
+
+const imageUrls=["lipstick.jpeg", "shoe.jpeg", "shirt.jpeg", "tshirt.jpeg", "jacket.jpeg"]
+
+export const getRandomImage = () => imageUrls[Math.floor(Math.random()* imageUrls.length)]
 
 const products = [
     {
@@ -424,6 +428,8 @@ const products = [
     }
 ]
 
+export const newProducts=[products[0], products[1], products[5], products[24]]
+
 // export const categoryNames = ["Women","men", "Kid", "Accessories", "Cosmetics"]
 
 export const categoryNames = [...new Set(products.map(item => item.category)) ]
@@ -440,10 +446,12 @@ export const categoryInfo = categoryNames.map(item => (
     }
 ))
 
-console.log(categoryInfo)
-// export const womenProducts = getProductsFromCategory("women").length
-// export const mensProducts = getProductsFromCategory("men").length
-// export const kidsProducts = getProductsFromCategory("kid").length
-// export const accessoriesProducts = getProductsFromCategory("accessories").length
-// export const cosmeticsProducts = getProductsFromCategory("cosmetics").length
+export const getproductsFromCategory = (categoryToFind) => {
+    return products.filter(item => item.category === categoryToFind)
+}
 
+export const womenProducts = getproductsFromCategory("women")
+export const mensProducts = getproductsFromCategory("men")
+export const kidsProducts = getproductsFromCategory("kid")
+export const accessoriesProducts = getproductsFromCategory("accessories")
+export const cosmeticsProducts = getproductsFromCategory("cosmetics")
