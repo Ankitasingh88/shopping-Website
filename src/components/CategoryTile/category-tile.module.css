@@ -1,11 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
 .categoryTileContainer {
-    display: grid;
-    height: 640px;
-    gap: 16px;
-    grid-template: 1fr 1fr / 2fr 1fr 1fr ;
-    grid-template-areas: "featured . . "
-                         "featured . .";
-    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px   
 }
 
 .category {
@@ -13,27 +11,37 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 24px;
+    order: 2;
+    padding-right: 24px;
 }
 
 .title {
-
+    margin: 0;
+    text-transform: capitalize;
 }
 
 .productInfo {
-
+    margin-bottom: 24px;
+    color: #e2e2e2;
 }
 
 .shopLink {
-
+    border-bottom: 2px solid rgb(222, 33, 33);
+    font-weight: 700;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 
 .featured {
     grid-area: featured;
+    height: 640px;
+    order: 1;
 }
 
 .featured .title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Rouge Script", cursive;
+    font-size: 4rem;
+    margin-bottom: 24px;
 }
 
 .women {
@@ -54,4 +62,15 @@
 
 .cosmetics {
     background-image: url('../../assets/cosmetics.jpeg');
+}
+
+@media screen and (min-width: 768px) {
+    .categoryTileContainer {
+        display: grid;
+        height: 640px;
+        grid-template: 1fr 1fr / 2fr 1fr 1fr;
+        grid-template-areas: "featured . ."
+                             "featured . .";
+        margin-top: 12px;
+    }    
 }

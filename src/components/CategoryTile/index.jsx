@@ -13,11 +13,12 @@ const CategoryTile = ({ name, productNumber, featured = false }) => {
             </h2>
             <div className={styles.productInfo}>
                 {featured ? 
-                    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione blanditiis, velit autem incidunt ut, deleniti dolorum consequuntur repellat minus sequi, eum cupiditate esse quibusdam reprehenderit nostrum possimus libero corrupti accusantium!'
-                    : `${productNumber} items`
+                'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione blanditiis, velit autem incidunt ut, deleniti dolorum consequuntur repellat minus sequi, eum cupiditate esse quibusdam reprehenderit nostrum possimus libero corrupti accusantium!'
+                : `${productNumber} items`
                 }
             </div>
-            <div className={styles.shopLink}>Shop Now</div>
+
+            <div><span className={styles.shopLink}>Shop Now</span></div>
         </div>
     )
 }
