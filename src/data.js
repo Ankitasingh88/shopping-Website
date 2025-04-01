@@ -1,4 +1,4 @@
-export const pages = ["Home", "Women", "men", "Kid", "Blog", "Contact"]
+export const pages = ["Home", "Women", "Men", "Kid", "Blog", "Contact"]
 
 const imageUrls=["lipstick.jpeg", "shoe.jpeg", "shirt.jpeg", "tshirt.jpeg", "jacket.jpeg"]
 
@@ -451,7 +451,7 @@ export const getproductsFromCategory = (categoryToFind) => {
 }
 
 export const womenProducts = getproductsFromCategory("women")
-export const mensProducts = getproductsFromCategory("men")
-export const kidsProducts = getproductsFromCategory("kid")
+export const menProducts = getproductsFromCategory("men")
+export const kidProducts = getproductsFromCategory("kid")
 export const accessoriesProducts = getproductsFromCategory("accessories")
 export const cosmeticsProducts = getproductsFromCategory("cosmetics")

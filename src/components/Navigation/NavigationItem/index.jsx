@@ -1,8 +1,9 @@
 import styles from '../navigation.module.css'
+import { NavLink } from 'react-router-dom'
 
 const NavigationItem = ({name}) => {
     return (
-        <div className={styles.menuItem}>{name}</div>
+        <NavLink to={name.toLowerCase() === "home" ? "/" : name.toLowerCase()} className={styles.menuItem}>{name}</NavLink>
     )
 }
 
