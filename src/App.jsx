@@ -22,12 +22,12 @@ function App() {
       <Route element={<Layout cartItems={cartProducts} />} >
         <Route path="/" element={<Home addproduct={updateCart}/>} />
         <Route path="/about" element= { <About title="Hello World!" />} />
-        
+
         <Route path="/women" element={ <ProductPage key="women" title="women" addProduct={updateCart} />} />
-        <Route path="/men" element={ <ProductPage key="men" title="men" />} />
-        <Route path="/kid" element={ <ProductPage key="kid" title="kid"  />} />
-        <Route path="/accessories" element={ <ProductPage key="accessories" title="accessories"  />} />
-        <Route path="/cosmetics" element={ <ProductPage key="cosmetics" title="cosmetics"  />} />
+        <Route path="/men" element={ <ProductPage key="men" title="men" addProduct={updateCart} />} />
+        <Route path="/kid" element={ <ProductPage key="kid" title="kid" addProduct={updateCart} />} />
+        <Route path="/accessories" element={ <ProductPage key="accessories" title="accessories" addProduct={updateCart} />} />
+        <Route path="/cosmetics" element={ <ProductPage key="cosmetics" title="cosmetics" addProduct={updateCart} />} />
       </Route>
     </Routes>
     </>
