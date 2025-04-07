@@ -12,10 +12,6 @@ function App() {
     setCartProducts( [...cartProducts, productToAdd] )
   }
 
-  const remove = (productToAdd) => {
-    setCartProducts( [...cartProducts, productToAdd] )
-  }
-
   return (
     <>
     <Routes>

@@ -3,7 +3,7 @@ import Product from '../../components/Product'
 import styles from './productPage.module.css'
 import { getproductsFromCategory } from '../../data'
 
-const ProductPage = ({ title, products }) => {
+const ProductPage = ({ title, addproduct }) => {
     const[categoryProducts, setCategoryProducts] = useState(null)
 
     useEffect(()=> {
@@ -15,8 +15,8 @@ const ProductPage = ({ title, products }) => {
         <h1 className={styles.pageTitle}>
             {title}
         </h1>
-        <div className={styles.productContainer}>
-            {categoryProducts && categoryProducts.map((item, index) =>  <Product key={index} item={item} buyItem={products} />)}       
+        <div className={styles.productsContainer}>
+            {categoryProducts && categoryProducts.map((item, index) =>  <Product key={index} item={item} buyItem={addproduct} />)}       
         </div> 
         </>  
     )
