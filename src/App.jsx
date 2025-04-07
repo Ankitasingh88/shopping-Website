@@ -6,10 +6,14 @@ import ProductPage from './pages/ProductPage'
 import { useState } from 'react'
 
 function App() {
-  const[cartProducts, setCartProducts] = useState([]);
+  const[cartProducts, setCartProducts] = useState([]); //a,b,c
 
   const updateCart = (productToAdd) => {
-    setCartProducts( [...cartProducts, productToAdd] )
+    setCartProducts( [...cartProducts, productToAdd] )//a,b,c,d
+  }
+
+  const removeItem = (productToRemove) => { //[a,b,c,d]productToRemove = c
+    setCartProducts(cartProducts.filter(item !== productToRemove) )//a,b,d
   }
 
   return (
