@@ -1,10 +1,9 @@
 import { categoryInfo, newProducts } from '../../data'
-import CategoryTile from '../../Components/CategoryTile'
-import styles from '../../Components/CategoryTile/category-tile.module.css'
-import Product from '../../Components/Product'
+import CategoryTile from '../../components/CategoryTile'
+import styles from '../../components/CategoryTile/category-tile.module.css'
+import Product from '../../components/Product'
 
-
-const Home = () => {
+const Home = ({addProduct}) => {
     return (
         <>
         <div className={styles.categoryTileContainer}>
@@ -15,7 +14,7 @@ const Home = () => {
 
         <div className="new-products">
           <h3 className="new-products__title">New Products</h3>
-          {newProducts.map((item, index) =>  <Product item={item} key={index} />)}
+          {newProducts.map((item, index) => <Product key={index} item={item} buyItem={addProduct} />)}
         </div>
         </>
     )

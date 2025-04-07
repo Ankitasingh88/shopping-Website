@@ -1,0 +1,35 @@
+App Component
+   const [cartProducts, setCartProducts] = useState([]);
+ 
+   Pass the setState function:
+      App(updateCart()) -> Home(addProduct) -> product(buyItem)
+          -> ProductPage -> Product
+   Pass the State
+      App -> Layout -> Header -> Cart
+ 
+Product  Component:
+   Create prop for the setState function
+   Button -> onClick = call the setState prop and add {item} to state
+ 
+Cart Component = prop for cartProducts
+    State to show/hide:
+    State for total
+ 
+    if no cartProducts:
+        Show "Cart is empty"
+    if cartProducts
+      cartProducts.map <Cart Item />
+ 
+    Show total:
+       function to work out the total
+         loop through cartProducts add and adds the prices together
+         setsTotal state
+ 
+      useEffect
+         call  the work out total function
+      every time a product is added :
+      useEffect (() => {
+ 
+      }, [products])
+ 
+CartItem component -> show the deatils of each product

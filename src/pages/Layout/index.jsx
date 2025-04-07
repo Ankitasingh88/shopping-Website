@@ -1,7 +1,7 @@
-import Header from "../../Components/Header"
+import Header from "../../components/Header"
 import { Outlet } from "react-router-dom"
 
-const Layout = () => {
+const Layout = ({cartItems}) => {
     return (
         <>
           <Header />
