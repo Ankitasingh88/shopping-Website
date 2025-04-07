@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom"
 const Layout = ({cartItems}) => {
     return (
         <>
-          <Header />
+          <Header productsInCart={cartItems} />
           <Outlet />
         </>
     )
